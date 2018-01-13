@@ -30,7 +30,8 @@ It is the speaker-reconition part by training the GMM model
 ### Introduction
    The main purpose of this part is to recognize who the speaker is. Firstly, training process will take repositories name after speakers, and process the .wavs one by one as well as detect the voice activity(VAD) and extract the feature. Furthermore, train the GMM model by the MFCC features. <br>
    One step forward, if you wanna add one speaker to the model, expand command will be your first priority for you don't need to train the existing speakers again. <br>
-   At last, as somebody arrive by the door, the process will automatically call the prediction function and pass the name as a parameter. The command will check the name whether it matches to the sound.
+   At last, as somebody arrive by the door, the process will automatically call the prediction function and pass the name as a parameter. The command will check the name whether it matches to the sound. <b>
+   By the way, I also attach a dtw repository to the speaker recognition one. It is easy to call the function by `python3 spre.py ./a.mp3 ./b.mp3`. It will transform mp3 to wav and run dtw to check the speaker. But if you wanna do the recognition through dtw, `ffmpeg` `librosa` is a must.
 
 ### Software Dependencies
 - scikit-learn 
